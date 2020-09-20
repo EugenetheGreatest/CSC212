@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+int main(){
+	string op ;
+	int num, num1, totalop, totalop2;
+	cout<<"Enter operator: ";
+	cin>>op;
+	if (op == "OR"){
+	cout<<"Enter first number: ";
+	cin>>num;
+	cout<<"Enter second number: ";
+	cin>>num1;
+	totalop=num|num1;
+	cout<<"---------------------------";
+	
+	cout<<"\nAnswer: "<<num<<"|"<<num1<<"="<<" "<<totalop;}
+	else if (op == "XOR"){
+	cout<<"Enter first number: ";
+	cin>>num;
+	cout<<"Enter second number: ";
+	cin>>num1;
+	totalop=num^num1;
+	cout<<"---------------------------";
+	
+	cout<<"\nAnswer: "<<num<<"^"<<num1<<"="<<" "<<totalop;}
+	else if (op == "AND"){
+	cout<<"Enter first number: ";
+	cin>>num;
+	cout<<"Enter second number: ";
+	cin>>num1;
+	totalop=num&num1;
+	cout<<"---------------------------";
+	
+	cout<<"\nAnswer: "<<num<<"&"<<num1<<"="<<" "<<totalop;}
+	else if (op == "RIGHTSHIFT"){
+	cout<<"Enter first number: ";
+	cin>>num;
+	cout<<"Enter second number: ";
+	cin>>num1;
+	totalop=num>>num1;
+	cout<<"---------------------------";
+	
+	cout<<"\nAnswer: "<<num<<">>"<<num1<<"="<<" "<<totalop;}
+	else if (op == "LEFTSHIFT"){
+	cout<<"Enter first number: ";
+	cin>>num;
+	cout<<"Enter second number: ";
+	cin>>num1;
+	totalop=num<<num1;
+	cout<<"---------------------------";
+	
+	cout<<"\nAnswer: "<<num<<"<<"<<num1<<"="<<" "<<totalop;}
+	else if (op == "COMPLEMENT"){
+	cout<<"Enter a number: ";
+	cin>>num;
+	totalop=~num;
+	totalop2=(totalop+'1');
+	cout<<"---------------------------";
+	
+	cout<<"\nAnswer: "<<"~"<<num<<"="<<" "<<totalop;
+	cout<<"\n\t2's complement will be: "<<totalop2;
+	}
+	
+	return 0;
+}
