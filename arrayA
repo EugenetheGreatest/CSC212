@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+ 
+int main(){
+	int num, a[10],b[10], c, d;
+	cout<<"Enter array size: ";
+	cin>>num;
+	cout<<"Enter any " <<num<< " elements: "<<endl;
+	for(int c=0; c<num; c++)
+	{
+		cin>>a[c];
+		
+	}
+	cout<<"User input(original): ";
+	for(int e=0; e<num; e++)
+	{
+		cout<<a[e];
+	}
+	
+	cout<<"\nUser input(reversed): ";
+
+   for(int c=num-1, d=0; c>=0; c--, d++)
+   {
+    b[c]=a[d];
+   }
+   for(c=0; c<num ;c++)
+   {
+   cout<<b[c];
+   }
+	
+	
+	
+	
+	return 0;
+}
