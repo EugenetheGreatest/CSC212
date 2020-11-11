@@ -1,0 +1,57 @@
+#include <iostream>
+#include <fstream>
+#include<conio.h>
+using namespace std;
+
+void write(string filename);
+string read(string filename);
+
+int main () 
+{
+	write("student.txt");
+	cout<<read("student.txt")<<endl;
+	return 0;}
+void write(string filename)
+{
+	string student;
+	float quiz, quiz2, quiz3, score;
+	cout<<"Enter student`s name: ";
+	cin>>student;
+	cout<<"Quiz 1 score: ";
+	cin>>quiz;
+	cout<<"Quiz 2 score: ";
+	cin>>quiz2;
+	cout<<"Quiz 3 score: ";
+	cin>>quiz3;
+	score=quiz+quiz2+quiz3;
+	cout<<"Average sum: "<<score<<endl;
+	ofstream myfile;
+	myfile.open("student.txt", ios::app);
+	
+	myfile<<"Student name: "<<student<<"\n";
+	myfile<<"Quiz 1: "<<quiz<<"\n";
+	myfile<<"Quiz 2: "<<quiz2<<"\n";
+	myfile<<"Quiz 3: "<<quiz3<<"\n";
+	myfile<<"Average sum: "<<score<<"\n";
+	myfile<<"Total: "<<score/3<<"\n";
+	myfile.close();}
+	
+	string read(string filename)
+{
+	string line;
+ifstream myfile("student.txt");
+
+if (myfile.is_open())
+   {
+    while(!myfile.eof())
+     {
+      getline(myfile,line);
+      cout<<line<<endl;
+     }
+      myfile.close();
+    }
+else
+cout<<"Unable to open file!";
+system("pause");
+getch();
+}
