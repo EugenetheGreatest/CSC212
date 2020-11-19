@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+int *evenNumbers(int array[5]){
+	return array;
+}
+int main(){
+	int array[]={2,4,6,8};
+	int *ptr= evenNumbers(array);
+
+	cout<<ptr[0]<<endl;
+	cout<<ptr[1]<<endl;
+	cout<<ptr[2]<<endl;
+	cout<<ptr[3]<<endl;
+	
+	return 0;
+}
